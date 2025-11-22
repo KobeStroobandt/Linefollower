@@ -156,6 +156,31 @@ void loop() {
 
 ---
 
+## Stappenplan voor demonstratie
+
+1. Sluit TB6612FNG aan volgens de hardware mapping.
+
+2. Upload de minimale POC-code.
+
+3. Open de Serial Monitor op 115200 baud.
+
+4. De code doorloopt automatisch de volgende tests:
+
+  - Motoren draaien vooruit
+  - Motoren draaien achteruit
+  - Motoren stoppen
+  - Motoren draaien onafhankelijk met verschillende snelheden
+  - Traploze snelheidsverandering via testRamp()
+  - Richting omkeren
+
+5. Observeer dat beide motoren zichtbaar reageren op elke testfase.
+
+6. De demonstratie is geslaagd wanneer beide motoren:
+
+  - afzonderlijk reageren,
+  - traploos van snelheid wisselen,
+  - zowel vooruit als achteruit draaien.
+
 ## Wat deze POC bewijst
 
 | Eigenschap | Bewijs |
