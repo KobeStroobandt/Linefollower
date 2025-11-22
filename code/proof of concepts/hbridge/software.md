@@ -49,7 +49,7 @@ const int MAX_SPEED = 150;
 
 ---
 
-## 🧩 Minimale Setup
+## Minimale Setup
 
 ```cpp
 void setup() {
@@ -65,7 +65,7 @@ void setup() {
 
 ---
 
-## 🧪 Demonstratiefuncties
+## Demonstratiefuncties
 
 ### Motor vooruit / achteruit / stop
 
@@ -125,7 +125,7 @@ void testDirectionChange() {
 
 ---
 
-## 🔁 Proof-of-Concept Loop
+## Proof-of-Concept Loop
 
 ```cpp
 void loop() {
@@ -156,7 +156,7 @@ void loop() {
 
 ---
 
-## ✅ Wat deze POC bewijst
+## Wat deze POC bewijst
 
 | Eigenschap | Bewijs |
 |-----------|--------|
@@ -166,9 +166,3 @@ void loop() {
 | **TB6612FNG werkt correct** | Standby, PWM, IN1/IN2 en offsets worden gebruikt |
 
 ---
-
-## 📦 Optioneel
-
-Wil je dat ik hiervan een **PDF**, **PowerPoint**, of een **mooier GitHub-document** maak met diagrammen?
-
-Laat het maar weten!
