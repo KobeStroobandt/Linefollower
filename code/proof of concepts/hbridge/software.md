@@ -37,9 +37,6 @@ void setup() {
   
   digitalWrite(LED_BUILTIN, LOW);
   
-
-  // TB6612FNG standby release
-  
   pinMode(STBY, OUTPUT);
   
   digitalWrite(STBY, HIGH);
