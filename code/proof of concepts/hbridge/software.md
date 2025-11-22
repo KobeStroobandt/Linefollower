@@ -166,7 +166,7 @@ void loop() {
 
 4. De code doorloopt automatisch de volgende tests:
 
-&nbsp- Motoren draaien vooruit
+- Motoren draaien vooruit
 - Motoren draaien achteruit
 - Motoren stoppen
 - Motoren draaien onafhankelijk met verschillende snelheden
