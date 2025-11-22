@@ -42,3 +42,21 @@ void setup() {
   digitalWrite(STBY, HIGH);
   
 }
+
+# Demonstratiefuncties
+...
+void testForward() {
+  motor1.drive(100);
+  motor2.drive(100);
+}
+
+void testBackward() {
+  motor1.drive(-100);
+  motor2.drive(-100);
+}
+
+void testStop() {
+  motor1.drive(0);
+  motor2.drive(0);
+}
+...
