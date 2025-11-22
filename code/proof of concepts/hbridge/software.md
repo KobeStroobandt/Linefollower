@@ -30,11 +30,18 @@ const int MAX_SPEED = 150;
 
 # Minimale software voor de POC
 void setup() {
+
   Serial.begin(115200);
+  
   pinMode(LED_BUILTIN, OUTPUT);
+  
   digitalWrite(LED_BUILTIN, LOW);
+  
 
   // TB6612FNG standby release
+  
   pinMode(STBY, OUTPUT);
+  
   digitalWrite(STBY, HIGH);
+  
 }
