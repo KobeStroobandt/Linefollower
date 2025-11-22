@@ -5,7 +5,7 @@ Dit werkt volledig onafhankelijk van de bestaande WiFi-webinterface.
 
 ---
 
-## 🎯 Doel
+## Doel
 
 Aantonen dat:
 
@@ -17,7 +17,7 @@ Aantonen dat:
 
 ---
 
-## 🧩 Hardware
+## Hardware
 
 | Onderdeel | Beschrijving |
 |----------|--------------|
@@ -35,7 +35,7 @@ Andere pin knop → GND
 
 ---
 
-## 🧩 Software-uitbreiding
+## Software-uitbreiding
 
 ### 1. Pin + variabele
 
@@ -81,7 +81,7 @@ if (hwToggle) {
 
 ---
 
-## 🔁 Testprocedure
+## Testprocedure
 
 1. Plaats de robot op de vloer.  
 2. Zet de ESP32 aan.  
@@ -93,7 +93,7 @@ if (hwToggle) {
 
 ---
 
-## ✔ Resultaat
+## Resultaat
 
 Deze POC bewijst dat:
 
