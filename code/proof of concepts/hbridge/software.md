@@ -166,12 +166,12 @@ void loop() {
 
 4. De code doorloopt automatisch de volgende tests:
 
-  -- Motoren draaien vooruit
-  -- Motoren draaien achteruit
-  -- Motoren stoppen
-  -- Motoren draaien onafhankelijk met verschillende snelheden
-  -- Traploze snelheidsverandering via testRamp()
-  -- Richting omkeren
+- Motoren draaien vooruit
+- Motoren draaien achteruit
+- Motoren stoppen
+- Motoren draaien onafhankelijk met verschillende snelheden
+- Traploze snelheidsverandering via testRamp()
+- Richting omkeren
 
 5. Observeer dat beide motoren zichtbaar reageren op elke testfase.
 
