@@ -1,107 +1,103 @@
-# Start/Stop Drukknop – Proof of Concept (Hardware Interrupt)
+# Hardware Interrupt Start/Stop — Proof of Concept (Lijnvolger)
 
-Dit document beschrijft een minimale *proof of concept* die aantoont dat een **drukknop** kan worden gebruikt om een proces te starten en stoppen via een **hardware interrupt** op een Arduino/ESP32.
-
-Deze POC is volledig **hardware- en softwarematig minimaal**.
-
----
-
-## 🧩 Hardware Configuratie
-
-**Benodigdheden:**
-
-- Arduino / ESP32
-- 1x Drukknop
-- 1x 10 kΩ Pull-down weerstand (optioneel als interne pull-down niet gebruikt)
-- Jumperkabels
-- LED + 220 Ω weerstand (optioneel voor visuele feedback)
-
-**Aansluitschema:**
-
-- **Drukknop:**  
-  - Eén pin → GPIO 2 (interrupt pin)  
-  - Andere pin → GND  
-- **LED (optioneel):**  
-  - Anode → GPIO 13  
-  - Cathode → GND via 220 Ω weerstand  
+Deze proof of concept toont aan dat de lijnvolger kan worden gestart en gestopt via een **fysieke drukknop**, aangestuurd door een **hardware interrupt**.  
+Dit werkt volledig onafhankelijk van de bestaande WiFi-webinterface.
 
 ---
 
-## 🧩 Minimale Software
+## 🎯 Doel
+
+Aantonen dat:
+
+- een fysieke drukknop een hardware interrupt kan triggeren  
+- de interrupt kan worden gebruikt om een start/stop functie uit te voeren  
+- de lijnvolger onmiddellijk reageert op de knop  
+- start/stop werkt zonder polling en zonder vertraging  
+- volledig integreert in het bestaande lijnvolgerprogramma
+
+---
+
+## 🧩 Hardware
+
+| Onderdeel | Beschrijving |
+|----------|--------------|
+| Microcontroller | ESP32 |
+| Drukknop | NO (normally open) |
+| Weerstand | 10 kΩ pull-down (optioneel, interne pull-up gebruikt) |
+| Aansluiting | Knop → GPIO 4 → GND |
+
+**Wiring**
+
+```
+BUTTON_PIN → GPIO 4  
+Andere pin knop → GND  
+```
+
+---
+
+## 🧩 Software-uitbreiding
+
+### 1. Pin + variabele
 
 ```cpp
-// Pin definities
-const int buttonPin = 2;    // Knop verbonden met interrupt-capable pin
-const int ledPin = 13;      // Optionele LED voor visuele feedback
+#define BUTTON_PIN 4
+volatile bool hwToggle = false;
+```
 
-volatile bool running = false;  // Status van het proces
+### 2. Interrupt Service Routine (ISR)
 
-// Interrupt service routine (ISR)
-void toggleRunning() {
-  running = !running;           // Toggle status bij elke knopdruk
+```cpp
+void IRAM_ATTR handleButtonInterrupt() {
+  hwToggle = true;
 }
+```
 
-void setup() {
-  pinMode(buttonPin, INPUT_PULLUP);  // interne pull-up gebruiken
-  pinMode(ledPin, OUTPUT);
-  
-  // Hardware interrupt configureren: verander op falling edge
-  attachInterrupt(digitalPinToInterrupt(buttonPin), toggleRunning, FALLING);
-  
-  Serial.begin(115200);
-  Serial.println("Start/Stop POC gestart. Druk op de knop om te togglen.");
-}
+### 3. Initialisatie in setup()
 
-void loop() {
-  // Visuele feedback via LED
-  digitalWrite(ledPin, running ? HIGH : LOW);
+```cpp
+pinMode(BUTTON_PIN, INPUT_PULLUP);
+attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), handleButtonInterrupt, FALLING);
+```
 
-  // Seriële feedback
-  static bool lastState = false;
-  if (lastState != running) {
-    Serial.println(running ? "START" : "STOP");
-    lastState = running;
+### 4. Verwerking in loop()
+
+```cpp
+if (hwToggle) {
+  hwToggle = false;
+
+  if (!start) {
+    start = true;
+    stop  = false;
+    Serial.println("HW START");
+  } else {
+    stop  = true;
+    start = false;
+    Serial.println("HW STOP");
   }
 
-  // Simulatie van een proces
-  if (running) {
-    // Plaats hier de code van het proces dat gestart/gestopt wordt
-  }
-  
-  delay(50); // kleine debounce / loop vertraging
+  delay(200);
 }
 ```
 
 ---
 
-## 🔁 Proof-of-Concept Teststappen
+## 🔁 Testprocedure
 
-1. Sluit de drukknop aan op de interrupt-pin (GPIO 2) en GND.  
-2. Sluit de optionele LED aan op GPIO 13 en GND.  
-3. Upload de bovenstaande code naar de Arduino/ESP32.  
-4. Open de Serial Monitor op 115200 baud.  
-5. Druk op de knop:
-   - Bij de eerste druk: LED gaat aan, Serial Monitor toont `START`.  
-   - Bij de tweede druk: LED gaat uit, Serial Monitor toont `STOP`.  
-   - Elke volgende druk toggelt de status opnieuw.  
-6. Observeer dat het proces (hier gesimuleerd) alleen actief is wanneer `running == true`.
+1. Plaats de robot op de vloer.  
+2. Zet de ESP32 aan.  
+3. Druk op de hardware start/stop knop.  
+4. Observeer:
+   - Eerste druk → lijnvolger start rijden  
+   - Tweede druk → lijnvolger stopt  
+   - LED of seriële output toont `HW START` / `HW STOP`  
 
 ---
 
-## ✅ Wat deze POC bewijst
+## ✔ Resultaat
 
-| Eigenschap | Bewijs |
-|------------|--------|
-| **Start/stop functionaliteit** | Status `running` toggelt bij elke knopdruk |
-| **Hardware interrupt correct** | Interrupt routine `toggleRunning()` reageert direct zonder polling |
-| **Visuele en seriële feedback** | LED en Serial Monitor tonen duidelijk de toestand |
+Deze POC bewijst dat:
 
----
-
-## 📦 Optioneel
-
-Deze POC kan worden uitgebreid door het toggle-signaal te gebruiken om bijvoorbeeld:
-
-- Motoren aan/uit te zetten  
-- Een robot te starten/stoppen  
-- Andere processen in je project te triggeren  
+- hardware interrupts betrouwbaar functioneren  
+- een start/stop signaal correct verwerkt wordt  
+- de lijnvolger direct reageert  
+- de functionaliteit onafhankelijk is van WiFi-besturing  
