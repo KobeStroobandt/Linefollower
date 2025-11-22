@@ -11,7 +11,7 @@ Alle niet-relevante subsystemen (wifi, sensoren, PID, API, SPIFFS, enz.) zijn ve
 
 ---
 
-## 🧩 Hardware Configuratie
+## Hardware Configuratie
 
 De gebruikte pinmapping komt direct uit het oorspronkelijke project:
 
