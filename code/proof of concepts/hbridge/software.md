@@ -1,62 +1,17 @@
-# Pinmapping
-#define AIN1 11;
+TB6612FNG Motorcontroller – Proof of Concept
 
-#define BIN1 9;
+Dit document beschrijft een minimalistische proof of concept die aantoont dat:
 
-#define AIN2 12;
+Twee motoren onafhankelijk kunnen draaien
 
-#define BIN2 3;
+De snelheid traploos regelbaar is
 
-#define PWMA 13;
+De motoren eenvoudig van draairichting kunnen veranderen
 
-#define PWMB 10;
+De TB6612FNG motorcontroller correct functioneert als H-Bridge-vervanger
 
-#define STBY 14;
+Alle niet-relevante subsystemen (wifi, sensoren, PID, API, SPIFFS, enz.) zijn verwijderd.
 
-# Motor offsets
-const int offsetA = -1;
+🧩 Hardware Configuratie
 
-const int offsetB = 1;
-
-# Motor objecten
-#include <SparkFun_TB6612.h>
-
-Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
-
-Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
-
-# Maximum snelheid
-const int MAX_SPEED = 150;
-
-# Minimale software voor de POC
-void setup() {
-
-  Serial.begin(115200);
-  
-  pinMode(LED_BUILTIN, OUTPUT);
-  
-  digitalWrite(LED_BUILTIN, LOW);
-  
-  pinMode(STBY, OUTPUT);
-  
-  digitalWrite(STBY, HIGH);
-  
-}
-
-# Demonstratiefuncties
-...
-void testForward() {
-  motor1.drive(100);
-  motor2.drive(100);
-}
-
-void testBackward() {
-  motor1.drive(-100);
-  motor2.drive(-100);
-}
-
-void testStop() {
-  motor1.drive(0);
-  motor2.drive(0);
-}
-...
+De gebruikte pinmapping komt direct uit het oorspronkelijke project.
