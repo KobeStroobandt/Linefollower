@@ -42,3 +42,5 @@ CALIBRATION SPEED: 50
 
 ### start/stop button
 uitleg locatie + werking start/stop button
+De knop start en stopt de robot. 
+De knop bevindt zich vanboven op de robot.
