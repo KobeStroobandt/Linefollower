@@ -119,5 +119,4 @@ Deze POC bewijst dat:
 - jouw pin-mapping volledig functioneel is  
 - de uitlezing onafhankelijk is van PID, motorsturing of calibratie  
 
-Dit voldoet aan alle eisen van de opdracht.
 
