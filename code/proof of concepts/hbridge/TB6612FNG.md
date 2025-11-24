@@ -5,10 +5,8 @@ Dit document beschrijft een *proof of concept* die aantoont dat:
 - Twee motoren **onafhankelijk** kunnen draaien  
 - De snelheid **traploos regelbaar** is  
 - De motoren eenvoudig van **draairichting** kunnen veranderen  
-- De TB6612FNG motorcontroller **correct functioneert** als H-Bridge-vervanger  
-
-Alle niet-relevante subsystemen (wifi, sensoren, PID, API, SPIFFS, enz.) zijn verwijderd.
-
+- De TB6612FNG motorcontroller **correct functioneert** als H-Bridge-vervanger
+  
 ---
 
 ## Hardware Configuratie
