@@ -1,6 +1,6 @@
 # TB6612FNG Motorcontroller – Proof of Concept
 
-Dit document beschrijft een minimalistische *proof of concept* die aantoont dat:
+Dit document beschrijft een *proof of concept* die aantoont dat:
 
 - Twee motoren **onafhankelijk** kunnen draaien  
 - De snelheid **traploos regelbaar** is  
