@@ -46,7 +46,6 @@ Emitter pin → 21
 
 ## Software – Minimale POC (gebaseerd op jouw eigen code)
 
-De volgende code is een **uitgestripte versie van jouw echte implementatie**, zodat alleen het uitlezen wordt gedemonstreerd.
 
 ### ✔ Minimale code
 
