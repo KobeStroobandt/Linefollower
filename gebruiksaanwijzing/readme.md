@@ -17,20 +17,19 @@ Wanneer ons toestel is verbonden met de robot kunnen we in onze browser surfen n
 Nu komen we uit op een webpagina, waarop we de robot kunnen besturen en enkele instellingen kunnen aanpassen.
 
 #### commando's
-debug [on/off]  
-start  
-stop  
-set cycle [µs]  
-set power [0..255]  
-set diff [0..1]  
+start
+stop
+speed
+calibration speed
 set kp [0..]  
 set ki [0..]  
 set kd [0..]  
-calibrate black  
-calibrate white  
+calibrate
 
 ### kalibratie
-uitleg kalibratie  
+Zet de robot in het midden van een zwarte lijn.
+De robot zal nu 45 graden naar rechts draaien en daarna 90 graden in de andere richting en dan terug 45 graden naar rechts.
+Tijdens deze bewegingen worden de waarden die de sensor meet verwerkt en wordt de sensor gekalibreerd.
 
 ### settings
 De robot rijdt stabiel met volgende parameters:  
