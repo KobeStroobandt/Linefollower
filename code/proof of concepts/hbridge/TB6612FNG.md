@@ -13,7 +13,7 @@ Alle niet-relevante subsystemen (wifi, sensoren, PID, API, SPIFFS, enz.) zijn ve
 
 ## Hardware Configuratie
 
-De gebruikte pinmapping komt direct uit het oorspronkelijke project:
+Pinmapping:
 
 ```cpp
 #define AIN1 11
