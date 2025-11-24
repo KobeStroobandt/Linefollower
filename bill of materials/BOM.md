@@ -9,3 +9,4 @@
 |         4| 1800 Top Fuel        | Lipo batterij, 1800mAh, 2S/7.4V, 13,3Wh, 25C      | recup | €20,00 | 1 | €20,00 |
 |         5| Polulu QTR 8         | Reflectance Sensor Array                          | nieuw | €12,00 | 1 | €12,00 |
 |         6| Aslong JGA12-N20-30  | DC-Transmissiemotor 6V - 500RPM                   | nieuw | €4,50  | 2 | €9,00  |
+|         7| ESP32 S3             | Microcontroller met Wifi                          | recup | €15,00 | 1 | €15,00 |
