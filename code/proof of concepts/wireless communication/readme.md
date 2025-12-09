@@ -2,6 +2,8 @@
 minimale hard- en software waarmee aangetoond wordt dat duplex kan gecommuniceerd worden tussen de microcontroller en een [laptop|smartphone] (schappen wat niet past), gebruik makend van Wifi (in te vullen)
 <br />
 ### configuratie
+
+Definiëren
 ```cpp
 #include <WiFi.h>
 #include <FS.h>
@@ -18,6 +20,8 @@ const char* password = "P@ss4Kobe!";
 AsyncWebServer server(80);
 String header;
 ```
+
+Wifi opstarten
 ```cpp
 void initWifi()
 {
@@ -122,6 +126,7 @@ void initWifi()
 ```
 ---
 
+Setup
 ```cpp
 void setup() {
   Serial.begin(115200);
