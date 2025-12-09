@@ -11,12 +11,6 @@ Dit document beschrijft een *proof of concept* die aantoont dat:
 
 ## Hardware Configuratie
 
-| Onderdeel | Beschrijving |
-|----------|--------------|
-| Microcontroller | ESP32 |
-| Drukknop | NO (normally open) |
-| Weerstand | 10 kΩ pull-down (optioneel, interne pull-up gebruikt) |
-| Aansluiting | Knop → GPIO 4 → GND |
 
 **Wiring**
 
