@@ -20,7 +20,7 @@ const char* password = "P@ss4Kobe!";
 AsyncWebServer server(80);
 String header;
 ```
-
+---
 Wifi opstarten
 ```cpp
 void initWifi()
@@ -125,7 +125,6 @@ void initWifi()
 }
 ```
 ---
-
 Setup
 ```cpp
 void setup() {
