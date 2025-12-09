@@ -11,10 +11,9 @@ Dit document beschrijft een *proof of concept* die aantoont dat:
 
 ## Hardware Configuratie
 
+Pinmapping:
 
-**Wiring**
-
-```
+```cpp
 BUTTON_PIN → GPIO 4  
 Andere pin knop → GND  
 ```
