@@ -28,12 +28,12 @@ De robot zal nu 45 graden naar rechts draaien en daarna 90 graden in de andere r
 Tijdens deze bewegingen worden de waarden die de sensor meet verwerkt en wordt de sensor gekalibreerd.
 
 ### settings
-De robot rijdt stabiel met volgende parameters:  
+De robot rijdt stabiel met volgende parameters
 Kp [0.10]
 Ki [0.00]
 Kd [0.00]
-speed: 180 of minder
-calibration speed: 50
+speed [180 of minder]
+calibration speed [50]
 
 ### start/stop button
 De knop start en stopt de robot. 
