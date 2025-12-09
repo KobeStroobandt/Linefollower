@@ -122,6 +122,53 @@ void initWifi()
 ```
 ---
 
+```cpp
+void setup() {
+  Serial.begin(115200);
+
+  delay(2000);
+
+  // init preferences
+  preferences.begin("kobe-lijnvolger", false); 
+
+  // Remove all preferences under the opened namespace
+  //preferences.clear();
+
+  // Read preferences
+  PID_Kp           = preferences.getFloat("pid_p", PID_Kp);
+  PID_Ki           = preferences.getFloat("pid_i", PID_Ki);
+  PID_Kd           = preferences.getFloat("pid_d", PID_Kd);
+  LFR_MAX_MOTOR_SPEED = preferences.getShort("max_speed", LFR_MAX_MOTOR_SPEED);
+  CALIBRATION_SPEED   = preferences.getShort("cal_speed", CALIBRATION_SPEED);
+
+  // configure the sensors
+  qtr.setTypeRC();
+  qtr.setSensorPins((const uint8_t[]){Sens01, Sens02, Sens03, Sens04, Sens05, Sens06, Sens07, Sens08}, SensorCount);
+  qtr.setEmitterPin(IR);
+  
+  //calibrate();
+  //*/
+
+    
+  // Initialize SPIFFS
+  /*
+  if (!LittleFS.begin(false)) {
+    Serial.println("An Error has occurred while mounting LittleFS");
+    return;
+  }
+    */
+  if (!SPIFFS.begin(false)) {
+    Serial.println("An Error has occurred while mounting Spiffs");
+    return;
+  } 
+  
+  digitalWrite(LED_BUILTIN, LOW);
+
+ // start = true
+  initWifi();
+}
+```
+---
 ### opmerkingen
 
 ### gebruiksaanwijzing
