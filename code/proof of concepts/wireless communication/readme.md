@@ -174,9 +174,7 @@ void setup() {
 ### gebruiksaanwijzing
 
 verbinding maken
-
-    Verbind je toestel met de Wifi "KOBE-LIJNVOLGER"
-    Surf in je browser naar "192.168.4.1"
-    Op de webpagina kan je de instellingen aanpassen
-
+- Verbind je toestel met de Wifi "KOBE-LIJNVOLGER"
+- Surf in je browser naar "192.168.4.1"
+- Op de webpagina kan je de instellingen aanpassen
 
