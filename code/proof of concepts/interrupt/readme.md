@@ -17,18 +17,13 @@ Pinmapping:
 #define BUTTON_PIN 4
 ```
 
----
-
-## Software-uitbreiding
-
-### 1. Pin + variabele
+Variabele:
 
 ```cpp
-#define BUTTON_PIN 4
 volatile bool hwToggle = false;
 ```
 
-### 2. Interrupt Service Routine (ISR)
+Interrupt Service Routine (ISR):
 
 ```cpp
 void IRAM_ATTR handleButtonInterrupt() {
@@ -36,7 +31,7 @@ void IRAM_ATTR handleButtonInterrupt() {
 }
 ```
 
-### 3. Initialisatie in setup()
+Initialisatie in setup():
 
 ```cpp
 pinMode(BUTTON_PIN, INPUT_PULLUP);
