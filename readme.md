@@ -7,21 +7,21 @@ lege repository die je als template kan gebruiken om een eigen repository te sta
   
 ## specifications
 
-microcontroller:
+microcontroller: ESP32 S3
 
-motors: 
+motors: Aslong JGA12-N20-30
 
-h-bridge:
+h-bridge: TB6612FNG
 
-sensors:
+sensors: Polulu QTR 8
 
-batteries:
+batteries: 1800 Top Fuel
 
-wireless communication:
+wireless communication: Wifi
 
-distance sensor - motors:
+distance sensor - motors: 7cm
 
-weight:
+weight: 0.5 kg
 
-speed: 
+speed: 0.56 m/s
 
