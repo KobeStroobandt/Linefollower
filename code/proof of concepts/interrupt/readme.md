@@ -31,14 +31,14 @@ void IRAM_ATTR handleButtonInterrupt() {
 }
 ```
 
-Initialisatie in setup():
+## Minimale Setup
 
 ```cpp
 pinMode(BUTTON_PIN, INPUT_PULLUP);
 attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), handleButtonInterrupt, FALLING);
 ```
 
-### 4. Verwerking in loop()
+## Proof-of-Concept Loop
 
 ```cpp
 if (hwToggle) {
@@ -60,19 +60,22 @@ if (hwToggle) {
 
 ---
 
-## Testprocedure
+## Stappenplan voor demonstratie
 
-1. Plaats de robot op de vloer.  
-2. Zet de ESP32 aan.  
-3. Druk op de hardware start/stop knop.  
-4. Observeer:
+1. Plaats de robot op de vloer.
+   
+3. Zet de ESP32 aan.
+   
+5. Druk op de hardware start/stop knop.
+   
+7. Observeer:
    - Eerste druk → lijnvolger start rijden  
    - Tweede druk → lijnvolger stopt  
    - LED of seriële output toont `HW START` / `HW STOP`  
 
 ---
 
-## Resultaat
+## Wat deze POC bewijst
 
 Deze POC bewijst dat:
 
