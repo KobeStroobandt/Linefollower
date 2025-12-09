@@ -29,9 +29,9 @@ Tijdens deze bewegingen worden de waarden die de sensor meet verwerkt en wordt d
 
 ### settings
 De robot rijdt stabiel met volgende parameters:  
-Kp: 0.10
-Ki: 0.00
-Kd: 0.00
+Kp [0.10]
+Ki [0.00]
+Kd [0.00]
 speed: 180 of minder
 calibration speed: 50
 
