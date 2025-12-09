@@ -12,6 +12,6 @@ Laad de batterij op
 Sluit alles aan zoals aangegeven in de elektrische tekening
 
 ### stap 3
-Open nu de code die terug te vinden is onder [Link naar mijn bestand](code/finaal)
+Open nu de code die terug te vinden is onder [Link naar mijn bestand](../code/finaal)
 
 
