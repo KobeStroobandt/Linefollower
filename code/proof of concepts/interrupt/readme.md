@@ -14,8 +14,7 @@ Dit document beschrijft een *proof of concept* die aantoont dat:
 Pinmapping:
 
 ```cpp
-BUTTON_PIN → GPIO 4  
-Andere pin knop → GND  
+#define BUTTON_PIN 4
 ```
 
 ---
