@@ -1,4 +1,4 @@
-# Hardware Interrupt Start/Stop — Proof of Concept (Lijnvolger)
+# Hardware Interrupt Start/Stop — Proof of Concept
 
 Deze proof of concept toont aan dat de lijnvolger kan worden gestart en gestopt via een **fysieke drukknop**, aangestuurd door een **hardware interrupt**.  
 Dit werkt volledig onafhankelijk van de bestaande WiFi-webinterface.
