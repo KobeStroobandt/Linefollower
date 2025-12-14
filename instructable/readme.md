@@ -12,7 +12,12 @@ Laad de batterij op
 Sluit alles aan zoals aangegeven in de elektrische tekening
 
 ### stap 4
-Open nu de code die terug te vinden is onder [Link naar mijn bestand](../code/finaal)
+Open nu de code die terug te vinden is onder [Link naar mijn bestand](../code/finaal) in visual studio code
 
 ### stap 5
-Open nu de code die terug te vinden is onder [Link naar mijn bestand](../code/finaal)
+Verbind nu je PC of laptop met de ESP32 en upload de code
+
+### stap 6
+3d print nu de onderdelen voor het frame van de lijnvolger, de files vind je onder [Link naar mijn bestand](../technische tekeningen/mechanisch)
+
+
