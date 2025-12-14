@@ -6,7 +6,7 @@ Een instructable is een stappenplan - zonder verdere uitleg - hoe je vertrekkend
 Bestel alle componenten uit de bill of materials [Link naar mijn bestand](../bill%of%materials/readme)
 
 ### stap 2
-3d print nu de onderdelen voor het frame van de lijnvolger, de files vind je onder [Link naar mijn bestand](../technische%tekeningen/readme)../technische tekeningen/mechanisch
+3d print nu de onderdelen voor het frame van de lijnvolger, de files vind je onder [Link naar mijn bestand](../technische%tekeningen/mechanisch)
 
 ### stap 3
 Schroef nu de motoren op het frame met motor brackets
